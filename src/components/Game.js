@@ -35,6 +35,7 @@ const Game = () => {
 
     return (
         <>
+            <h1>Tic Tac Toe</h1>
             <Board squares={history[turnNumber]} onClick={handleClick} />
             <h2>{winner ? `${winner} wins!` : `${player} it is your turn!`}</h2>
         </>

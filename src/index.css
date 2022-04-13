@@ -15,8 +15,8 @@ body {
 }
 
 .board {
-  border: 1rem solid red;
-  background: blue;
+  border: none;
+  background: black;
   width: 500px;
   height: 500px;
   display: grid;
@@ -25,9 +25,9 @@ body {
 }
 
 .square {
-  background: #272727;
+  background: white;
   border: none;
-  font-size: 5rem;
+  font-size: 8rem;
   cursor: pointer;
   outline: none;
 }
