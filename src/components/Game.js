@@ -8,6 +8,7 @@ const Game = () => {
     const [player, setPlayer] = useState("X");
     const winner = checkForWin(history[turnNumber]);
 
+    //change player
     const changePlayer = () => {
         const currentPlayer = player;
         if(currentPlayer === "X") {
@@ -16,8 +17,13 @@ const Game = () => {
             setPlayer("X");
         }
     }
-    console.log(player);
 
+    //reset to new game
+    const reset = () => {
+        setHistory([Array(9).fill(null)]);
+        setTurnNumber(0);
+        setPlayer("X");
+    }
 
     const handleClick = (index) => {
         const currentHistory = history.slice(0, turnNumber + 1);
@@ -38,6 +44,7 @@ const Game = () => {
             <h1>Tic Tac Toe</h1>
             <Board squares={history[turnNumber]} onClick={handleClick} />
             <h2>{winner ? `${winner} wins!` : `${player} it is your turn!`}</h2>
+            <button className="resetButton" onClick={reset}>Reset</button>
         </>
         
     );
