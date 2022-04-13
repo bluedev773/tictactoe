@@ -44,3 +44,28 @@ body {
   outline: none;
 }
 
+.resetButton{
+   width: 30%;
+   display:inline-block;
+   padding:0.5em 3em;
+   border:0.16em solid black;
+   margin-top: 5em;
+   box-sizing: border-box;
+   text-decoration:none;
+   text-transform:uppercase;
+   font-weight:400;
+   color: black;
+   text-align:center;
+   transition: all 0.15s;
+  }
+  .resetButton:hover{
+   color:#949494;
+   border-color:#949494;
+  }
+
+  #root {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
