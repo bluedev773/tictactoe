@@ -6,8 +6,14 @@ export const Game = () => {
     const [history, setHistory] = useState(Array(9).fill(null));
     const [turnNumber, setTurnNumber] = useState(0);
     const [player, setPlayer] = useState("X");
-    const currentPlayer = (player) => {
-        
+
+    const changePlayer = () => {
+        const currentPlayer = player;
+        if(currentPlayer === "X") {
+            setPlayer = "O";
+        } else {
+            setPlayer = "X";
+        }
     }
 
     const winner = checkForWin(history[turnNumber]);
@@ -19,6 +25,10 @@ export const Game = () => {
 
         //check if there is a winner or if the square has been clicked previously
         if(winner || squares[index]) return;
-    }
+        squares[index] = player;
+        setHistory([...currentHistory, squares]);
+        setTurnNumber(currentHistory.length);
+        changePlayer();
+    };
 
 }
