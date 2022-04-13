@@ -5,13 +5,25 @@
   box-sizing: border-box;
 }
 
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 50px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 50px;
+}
+
 body {
   background-color: white;
   color: black;
   display: flex;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  padding: 2rem;
 }
 
 .board {
@@ -21,7 +33,7 @@ body {
   height: 500px;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  gap: 1rem;
+  gap: 10px;
 }
 
 .square {
