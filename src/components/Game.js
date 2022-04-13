@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Board from './Board';
 import { checkForWin } from '../helpers/checkForWin';
 
-export const Game = () => {
+const Game = () => {
     const [history, setHistory] = useState(Array(9).fill(null));
     const [turnNumber, setTurnNumber] = useState(0);
     const [player, setPlayer] = useState("X");
@@ -31,4 +31,14 @@ export const Game = () => {
         changePlayer();
     };
 
+    return (
+        <>
+            <Board squares={history[turnNumber]} onClick={handleClick} />
+            <h2>{winner ? `${winner} wins!` : `${player} it is your turn!`}</h2>
+        </>
+        
+    )
+
 }
+
+export default Game;
